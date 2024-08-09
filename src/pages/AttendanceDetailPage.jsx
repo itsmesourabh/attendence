@@ -8,24 +8,6 @@ const AttendanceDetailPage = () => {
   const { attendanceId } = useParams();
   const [attendance, setAttendance] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchAttendance = async () => {
-  //     try {
-  //       const docRef = doc(firestore, 'attendance', attendanceId);
-  //       const docSnap = await getDoc(docRef);
-  //       if (docSnap.exists()) {
-  //         setAttendance(docSnap.data());
-  //       } else {
-  //         console.error("No such document!");
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching attendance details:", error);
-  //     }
-  //   };
-
-  //   fetchAttendance();
-  // }, [attendanceId]);
-
 
   useEffect(() => {
     const fetchAttendance = async () => {

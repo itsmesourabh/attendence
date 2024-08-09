@@ -1,5 +1,10 @@
 .admin-page {
   padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .admin-page h1 {
@@ -26,8 +31,19 @@
 
 .home-page {
   padding: 20px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
 
+}
+.home-mini{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 .home-page h1 {
   color: #333;
   margin-bottom: 20px;
@@ -55,7 +71,20 @@
 .home-page button:hover {
   background-color: #45a049;
 }
+.home-page h2,
+.home-page h3,
+.home-page button {
+  margin-bottom: 10px;
+}
 
+
+.sign-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
 
 .sign-in-page h1 {
   color: #333;
@@ -65,15 +94,22 @@
 .sign-in-page form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  width: 100%;
+  max-width: 400px; /* Adjust width to control form size */
 }
 
 .sign-in-page input {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 50vh;
+  border: 2px solid #ccc; /* Fixed border size */
+  box-sizing: border-box; /* Include border and padding in width */
+  width: 100%; /* Make input full-width within container */
+  transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+.sign-in-page input.error {
+  border-color: red; /* Error border color */
 }
 
 .sign-in-page button {
@@ -82,6 +118,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .sign-in-page button:hover {
@@ -90,16 +127,9 @@
 
 .sign-in-page p {
   color: red;
-  margin-top: 10px;
+  margin-top: -10px; /* Adjust margin to position error messages */
 }
 
-.sign-in-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  flex-direction: column;
-}
 
 .navbar {
   background-color: #d5e0ea;
@@ -111,4 +141,51 @@
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.sign-up-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.sign-up-page form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Limiting width for better control */
+}
+
+.sign-up-page input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc; /* Fixed border size */
+  box-sizing: border-box; /* Include border and padding in width */
+  width: 100%; /* Make input full-width within container */
+  transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+.sign-up-page input.error {
+  border-color: red; /* Error border color */
+}
+
+.sign-up-page button {
+  background-color: #8675c1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-up-page button:hover {
+  background-color: #b3abd1;
+}
+
+.sign-up-page p {
+  color: red;
+  margin-top: -10px;
 }
